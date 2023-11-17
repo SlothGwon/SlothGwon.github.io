@@ -15,8 +15,8 @@ os.chdir("/3DOD/GUPNet/code")
 
 **- F8을 누르며 디버깅시에, 변수 값이 보이지 않는다면 아래의 설정을 참고하여 보면 해결하게 될 수도 있다**
 
-build, Execution, debelopment
--python debugger
+build, Execution, debelopment\
+-python debugger\
 --gevent compatilble 체크 할것
 
 
