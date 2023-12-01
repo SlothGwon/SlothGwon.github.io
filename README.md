@@ -22,11 +22,11 @@ build, Execution, debelopment\
 
 
 pycharm 경로 탐색 버그시 아래의 코드를 사용하여, cahche경로에서 docker경로로 돌아올것
-import os
-import sys
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ROOT_DIR = os.path.dirname(BASE_DIR)
-sys.path.append(ROOT_DIR)
+import os\
+import sys\
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))\
+ROOT_DIR = os.path.dirname(BASE_DIR)\
+sys.path.append(ROOT_DIR)\
 
 
 
