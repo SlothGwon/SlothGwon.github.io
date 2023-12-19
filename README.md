@@ -38,15 +38,16 @@ for _ in range(10):
     
 
 **모델을 GPU에서 돌릴때의 속도를 측정하기 위해서는 gpu가 시작될 때와 끝날때를 짚는것이 중요하다, 이를 위해서는 cuda.synchronize 함수를 사용해야한다\**
-with torch.no_grad():
-    for rep in range(repetitions):
-        starter.record()
-        _ = model(dummy_input)
-        ender.record()
-        # WAIT FOR GPU SYNC
-        torch.cuda.synchronize()
-        curr_time = starter.elapsed_time(ender)
-        timings[rep] = curr_time
+
+with torch.no_grad():  
+    for rep in range(repetitions):  
+        starter.record()  
+        _ = model(dummy_input)  
+        ender.record()  
+        # WAIT FOR GPU SYNC  
+        torch.cuda.synchronize()  
+        curr_time = starter.elapsed_time(ender)  
+        timings[rep] = curr_time  
 
 
 
