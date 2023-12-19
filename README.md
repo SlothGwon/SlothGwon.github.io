@@ -21,12 +21,34 @@ build, Execution, debelopment\
 
 
 
-pycharm 경로 탐색 버그시 아래의 코드를 사용하여, cahche경로에서 docker경로로 돌아올것\
+**pycharm 경로 탐색 버그시 아래의 코드를 사용하여, cahche경로에서 docker경로로 돌아올것\**
 import os\
 import sys\
 BASE_DIR = os.path.dirname(os.path.abspath(\_\_file\_\_))\
 ROOT_DIR = os.path.dirname(BASE_DIR)\
 sys.path.append(ROOT_DIR)
+
+
+starter, ender = torch.cuda.Event(enable_timing=True), torch.cuda.Event(enable_timing=True)
+repetitions = 300
+timings=np.zeros((repetitions,1))
+
+for _ in range(10):
+    _ = model(dummy_input)
+    
+
+**모델을 GPU에서 돌릴때의 속도를 측정하기 위해서는 gpu가 시작될 때와 끝날때를 짚는것이 중요하다, 이를 위해서는 cuda.synchronize 함수를 사용해야한다\**
+with torch.no_grad():
+    for rep in range(repetitions):
+        starter.record()
+        _ = model(dummy_input)
+        ender.record()
+        # WAIT FOR GPU SYNC
+        torch.cuda.synchronize()
+        curr_time = starter.elapsed_time(ender)
+        timings[rep] = curr_time
+
+
 
 
 
