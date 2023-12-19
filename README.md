@@ -52,5 +52,14 @@ with torch.no_grad():
 
 
 
+## SimKD
+
+model_dict = student_model.state_dict()  
+
+pretrained_dict = {k: v for k, v in teacher_model_dict['model_state'].items() if k in model_dict}  
+model_dict.update(pretrained_dict)  
+student_model.load_state_dict(model_dict)  
+
+
 
 
