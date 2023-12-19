@@ -54,7 +54,7 @@ with torch.no_grad():
 
 ## SimKD  
 
-Teacher model과 Student모델간의 공유되는 부분만 Student model로 가져오기 위해서는 아래의 코드를 사용해야한다
+**- Teacher model과 Student모델간의 공유되는 부분만 Student model로 가져오기 위해서는 아래의 코드를 사용해야한다**
 
 model_dict = student_model.state_dict()  
 
