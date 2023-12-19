@@ -21,7 +21,8 @@ build, Execution, debelopment\
 
 
 
-**pycharm 경로 탐색 버그시 아래의 코드를 사용하여, cahche경로에서 docker경로로 돌아올것\**
+### pycharm 경로 탐색 버그시 아래의 코드를 사용하여, cahche경로에서 docker경로로 돌아올것\  
+
 import os\
 import sys\
 BASE_DIR = os.path.dirname(os.path.abspath(\_\_file\_\_))\
