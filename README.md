@@ -50,7 +50,9 @@ with torch.no_grad():
         timings[rep] = curr_time  
 
 
-**- deformable conv시 디버깅이 안되는 버그가 있을경우**  
+
+**- Deformable conv시 디버깅이 안되는 버그가 있을경우**  
+
 _C를 Import 하지 못하겠다는 버그 발생의 경우 환경이 detectron을 잡지 못하는 문제이다.  
 프로젝트 폴더 안에 있는 detectron 폴더를 detectron__과같이 이름을 바꾸면 해결 할 수 있다
 
