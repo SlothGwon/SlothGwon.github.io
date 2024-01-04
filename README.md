@@ -8,8 +8,15 @@
 
 **- MobaXterm 과 같은 터미널의 파일 실행 위치와, Pycharm의 디버깅에서 파일 실행 위치가 다를때에는 코드 상에서 아래의 os.chdir 함수를 사용하여 현재 위치를 수정해 주면 코드 위치를 통일시킬 수 있다**
 
-import os
+import os\
 os.chdir("/3DOD/GUPNet/code")
+
+**- 위를 했음에도 pycharm 경로 탐색 버그가 생길시 아래의 코드를 사용하여, cahche경로에서 docker경로로 돌아올것**  
+import os\
+import sys\
+BASE_DIR = os.path.dirname(os.path.abspath(\_\_file\_\_))\
+ROOT_DIR = os.path.dirname(BASE_DIR)\
+sys.path.append(ROOT_DIR)
 
 
 
@@ -20,14 +27,6 @@ build, Execution, debelopment\
 --gevent compatilble 체크 할것
 
 
-
-**- pycharm 경로 탐색 버그시 아래의 코드를 사용하여, cahche경로에서 docker경로로 돌아올것**  
-
-import os\
-import sys\
-BASE_DIR = os.path.dirname(os.path.abspath(\_\_file\_\_))\
-ROOT_DIR = os.path.dirname(BASE_DIR)\
-sys.path.append(ROOT_DIR)
 
 
 starter, ender = torch.cuda.Event(enable_timing=True), torch.cuda.Event(enable_timing=True)
@@ -49,6 +48,11 @@ with torch.no_grad():
         torch.cuda.synchronize()  
         curr_time = starter.elapsed_time(ender)  
         timings[rep] = curr_time  
+
+
+**- deformable conv시 디버깅이 안되는 버그가 있을경우**  
+_C를 Import 하지 못하겠다는 버그 발생의 경우 환경이 detectron을 잡지 못하는 문제이다.  
+프로젝트 폴더 안에 있는 detectron 폴더를 detectron__과같이 이름을 바꾸면 해결 할 수 있다
 
 
 
