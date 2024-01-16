@@ -70,10 +70,18 @@ student_model.load_state_dict(model_dict)
 
 
 ## FastRcnn
+**- pycharm 에서 remote_source로 연결이 될때에**  
 
-**- github에서 git clone 한다음 local 파일을 사용하기 위해선 아래의 코드를 입력하면 된다**  
+1. github에서 git clone 한다음 local 파일을 사용하기 위해선 아래의 코드를 입력하면 된다**  
   
 python setup.py build develop  
+
+2. path_mapping을 사용해 local폴더와 remote 폴더를 연결 해 준다**  
+
+
+
+
+
 
 
 
