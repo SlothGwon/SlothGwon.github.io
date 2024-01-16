@@ -71,7 +71,8 @@ student_model.load_state_dict(model_dict)
 
 ## FastRcnn
 
-**- github에서 git clone 한다음 local 파일을 사용하기 위해선 아래의 코드를 입력하면 된다**
+**- github에서 git clone 한다음 local 파일을 사용하기 위해선 아래의 코드를 입력하면 된다**  
+  
 python setup.py build develop  
 
 
