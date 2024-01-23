@@ -69,14 +69,22 @@ model_dict.update(pretrained_dict)
 student_model.load_state_dict(model_dict)  
 
 
-## FastRcnn
+## MonoRcnn
 **- pycharm 에서 remote_source로 연결이 될때에**  
 
 1. github에서 git clone 한다음 local 파일을 사용하기 위해선 아래의 코드를 입력하면 된다  
   
    python setup.py build develop  
 
-2. path_mapping을 사용해 local폴더와 remote 폴더를 연결 해 준다  
+2. path_mapping을 사용해 local폴더와 remote 폴더를 연결 해 준다
+
+
+**- kitti bash 문제**
+evaluate_object.cpp:12:10: fatal error: boost/numeric/ublas/matrix.hpp: No such file or directory  
+
+apt-get update  
+apt-get install libboost-all-dev  
+입력
 
 
 
