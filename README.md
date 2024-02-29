@@ -88,7 +88,7 @@ apt-get install libboost-all-dev
 
 
 **3DODKD 구현**
-MonoRCNN의 경우 json 파일을 읽어서 data loader 작성함
+MonoRCNN의 경우 json 파일을 읽어서 data loader 작성함\
 이를 위해서 python prepare_KITTI_teacher.py 를 실행해 json 만들 필요가 있음
 
 
