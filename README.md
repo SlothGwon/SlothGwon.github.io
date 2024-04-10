@@ -92,6 +92,9 @@ MonoRCNN의 경우 json 파일을 읽어서 data loader 작성함\
 이를 위해서 python prepare_KITTI_teacher.py 를 실행해 json 만들 필요가 있음
 
 
+MonoRCNN의 경우, MonoRCNN/lib/augmantation.py 에서 이미지 리사이징을 진행함 이때 training은 세로방향의 pedding을 진행해 (512, 1760) 의 사이즈가 되지만, test의 경우 (512, 1696)사이즈가 됨
+
+
 
 
 
