@@ -97,8 +97,9 @@ MonoRCNN의 경우, MonoRCNN/lib/augmantation.py 에서 이미지 리사이징�
 
 
 
-
-
+**CUDA 메모리 부족**
+쿠다 메모리가 부족한 경우, 아래의 명령어 입력시 해결 될 수 있음\
+torch.cuda.empty_cache()
 
 
 
